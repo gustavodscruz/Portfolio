@@ -1,20 +1,30 @@
 ---
 import { Image } from "astro:assets";
 import smile from "../../public/icons/smile-icon.webp";
+import myPhoto from "../../public/img/gustavodscruz.webp"
+import enphasis from "../../public/icons/enfactsize.svg"
 
 
 ---
 
 <section class="py-10 flex gap-10">
-  <div class="w-1/2 flex flex-col gap-5">
-    <Image
-      src={smile}
-      alt={"Ícone com sorriso :)"}
-      height={smile.height}
-      width={smile.width}
-    />
-    <h2 class="font-bold text-4xl">I design ✍️ top notch websites</h2>
-    <a class="p-5 bg-[#bae6ff] rounded-3xl border-4 border-black">See Portfolio</a>
+  <div class="w-1/2 flex flex-col gap-5 m-auto justify-center items-center">
+    <div class="flex flex-col gap-10">
+      <Image
+        src={smile}
+        alt={"Ícone com sorriso :)"}
+        height={smile.height}
+        width={smile.width}
+      />
+      <h2 class="font-bold text-4xl">I design ✍️ top notch websites</h2>
+      <div class="flex"><a class="p-5 bg-[#bae6ff] rounded-3xl border-4 border-black w-1/2 text-center font-semibold text-2xl hover:bg-[#6fb4dc] transition-all duration-300 cursor-pointer hover:scale-105">See Portfolio</a>
+        <Image src={enphasis} alt={"Destaque"} height={enphasis.height} width={enphasis.width} 
+        class="-mb-24 -ml-3"
+        />
+      </div>
+    </div>
   </div>
-  <div class="w-1/2 flex"></div>
+  <div class="w-1/2 flex justify-center">
+      <Image src={myPhoto} height={myPhoto.height} width={myPhoto.width} alt={"Gustavo Dias, desenvolvedor com multi ferramentas"} />
+  </div>
 </section>
